@@ -1,0 +1,20 @@
+{
+  "name": "design-mode",
+  "version": "1.0.0",
+  "description": "23 design modes",
+  "main": "/src/main.ts",
+  "repository": "git@github.com:XiaoYimi/design-mode.git",
+  "author": "chenfengbukeyimi",
+  "license": "MIT",
+  "private": true,
+  "scripts": {
+    "dev": "ts-node-dev ./src/main.ts --no-cache",
+    "eslint": "tslint --fix -p tsconfig.json"
+  },
+  "dependencies": {},
+  "devDependencies": {
+    "@types/node": "^20.4.3",
+    "ts-node-dev": "^2.0.0",
+    "typescript": "^5.1.6"
+  }
+}
