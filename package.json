@@ -9,7 +9,10 @@
   "private": true,
   "scripts": {
     "dev": "ts-node-dev ./src/main.ts --no-cache",
-    "eslint": "tslint --fix -p tsconfig.json"
+    "eslint": "tslint --fix -p tsconfig.json",
+    "test:singleton": "ts-node-dev ./example/Singleton.ts --no-cache",
+    "test:flyweight": "ts-node-dev ./example/Flyweight.ts --no-cache",
+    "test:delegate": "ts-node-dev ./example/Delegate.ts --no-cache"
   },
   "dependencies": {},
   "devDependencies": {

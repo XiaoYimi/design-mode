@@ -1,17 +1,25 @@
-/*
+<!--
  * @Author: chenfengbukeyimi 2590856083@qq.com
  * @LastEditors: chenfengbukeyimi 2590856083@qq.com
  * Copyright (c) 2023 by chenfengbukeyimi, All Rights Reserved.
- */
+-->
 
-console.log(`\n Start learning design patterns ... \n`);
+# 享元模式 (`Flyweight`)
 
-console.log(
-  `Please you execute the 'yarn test:xxxx' script command in the command panel. Such as 'yarn test:delegate' \n`,
-);
+## 认识享元模式
 
+- 设计模式类型: 结构型模式
+- 关注点: 对象之间的组合和关系;
+- 解决问题: 解决创建同质资源对象次数的问题,减少创建与销毁的开销;
+- 本质: 合理利用已有的同质资源对象,通过回收与重新分配资源达到减少创建对象次数;
+- 应用场景: 百度 `mask` 图标、`react` 源码、列表搜索、池化技术(内存池、线程池、连接池)等等
+- 表现形式:
+  - 定义管理器类,内部缓存同质资源对象列表,并定义分配与回收方法;
+
+## 享元模式场景
+
+```ts
 /** ======== 列表搜索案例 ======== */
-
 /** 列表元素内容(同质资源) */
 class ListItem {
   public author: string;
@@ -97,3 +105,4 @@ console.log(`第二次搜索,展示内容`, displayList);
 /** 第三次搜索, 因仓库对象数与请求数相差 2,故创建 2 次 */
 getList(7);
 console.log(`第三次搜索,展示内容`, displayList);
+```
